@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#whole{
+    width: 100%;
+    height: 100%;
+    /*background: #666;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#app{
+    width: 800px;
+    height:500px;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    /*background: rgba(0,0,0,.5);*/
+    border: 1px solid black;
+
+}
+header{
+    width: 100%;
+    height:80px;
+
+    background: rgba(176,24,6,.8);
+}
+.search_form{
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    height:30px;
+    margin-top:25px;
+    float: right;
+    margin-right:10px;
+}
+.search_form input{
+    float: left;
+    width: 150px;
+    height: 30px;
+    padding:0px 10px;
+    color: #fff;
+    background: rgba(0,0,0,0);
+    border: none;
+}
+.search_form button{
+    float: left;
+    background: rgba(0,0,0,0);
+    /*border: 1px solid black;*/
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+}
+.search_form button img{
+    width: 25px;
+    /*border: 1px solid black;*/
+}
+.content{
+    width: 100%;
+    height:380px;
+    /*background: rgba(176,24,6,.2);*/
+    /*background: #ddd;*/
+    background:rgba(255,255,255,.6)
+}
+.left,.middle,.right{
+    float: left;
+    height: 100%;
+}
+.left,.right{
+    width: 200px;
+}
+.middle{
+    /*background: #888;*/
+    width: 400px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.song_list, .lyric{
+    width: 200px;
+    /*padding:10px;*/
+    /*margin: 0px 10px;*/
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    font-size: 13px;
+}
+.song_list::-webkit-scrollbar{
+    width: 0px;
+}
+.song_list a{
+    color: #333;
+}
+.song_list a img{
+    /*border: 1px solid black;*/
+    width: 20px;
+    float: left;
+}
+.song_li{
+    padding:0 5px;
+    /*min-height: 20px;*/
+    line-height: 20px;
+    margin:5px 0px;
+}
+.song_li:hover{
+    background: rgba(255,255,255,0.4);
+}
+.al_cover{
+    width: 200px;
+    height: 200px;
+    /*border: 1px solid black;*/
+    border-radius: 50%;
+}
+
+footer{
+    width: 100%;
+    height:40px;
+    /*background: #9a55cd;*/
+}
+.play_bar{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+.play_bar audio{
+    width: 100%;
+}

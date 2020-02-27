@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+<body >
+
+<div id="whole" :style="{backgroundImage:'url('+picUrl+')'}">
+
+
+    <div id="app" >
+        <header class="search">
+            <!--<img src="" alt="">-->
+            <div class="search_form">
+                <input type="text" placeholder="输入歌曲、歌手、歌词等" v-model="search" @keyup.enter="searchMusic">
+                <button @click="searchMusic"><img src="img/search.png" alt=""></button>
+            </div>
+        </header>
+        <div class="content">
+            <div class="left" >
+                <ul class="song_list">
+                    <li v-for="music in musicList" class="song_li">
+
+                        <a href="javascript:;" @click="playMusic(music.id)"><img src="img/play.png" alt=""></a>
+                        <span>{{music.name}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <div class="pic">
+                    <img v-bind:src="picUrl" alt="" class="al_cover" v-if="picUrl!=''">
+                </div>
+
+            </div>
+            <div class="right">
+                <div class="lyric">
+                    <ul>
+                        <li v-for="lyric in lyrics">
+                            {{lyric}} <br>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="progress">
+            <div class="play_bar">
+                <audio v-bind:src="musicUrl" controls autoplay loop id="audio_volume"></audio>
+            </div>
+        </footer>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="player.js"></script>
+    <script>
+        document.getElementById("audio_volume").volume=0.2;
+    </script>
+
+
+</body>
+</html>
